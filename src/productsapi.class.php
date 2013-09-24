@@ -27,7 +27,8 @@ class ProductsApi extends SyndicatePlusApiBase
 	}
 
 	/**
-	 * Returns a single product result
+	 * Returns a single product result if a product is found matching
+	 * the specified product Id.
 	 *
 	 * @access public
 	 * @param $productId 			The id of the product to look up
@@ -36,6 +37,20 @@ class ProductsApi extends SyndicatePlusApiBase
 	public function getProductById($productId) {
 		$result = $this->sendRequest("/products/product/". $productId, "");
 		return $result;
-	}	
+	}
+
+
+	/**
+	 * Returns a single product result if a product is found matching
+	 * the specified product EAN code.
+	 *
+	 * @access public
+	 * @param $ean 					The to-be-looked up EAN code
+	 * @return object
+	 */
+	public function getProductByEan($ean)  {
+		$result = $this->sendRequest("/products/product", "ean=$ean");
+		return $result;
+	}
 }
 ?>
