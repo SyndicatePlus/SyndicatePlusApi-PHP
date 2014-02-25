@@ -14,7 +14,7 @@ abstract class SyndicatePlusApiBase
 
 	private $apiEndpoint = "http://api.syndicateplus.com";
 
-	private $version = 0;
+	private $version = 1;
 
 	protected function __construct($apiKey, $apiSecret, $versionNumber) {
 		$this->apiKey = $apiKey;
