@@ -10,7 +10,7 @@ require_once dirname(__FILE__) ."/syndicateplusapibase.class.php";
  */
 class ProductsApi extends SyndicatePlusApiBase
 {
-	public function __construct($apiKey, $apiSecret, $version = 0) {
+	public function __construct($apiKey, $apiSecret, $version = 1) {
 		parent::__construct($apiKey, $apiSecret, $version);
 	}
 
@@ -50,6 +50,19 @@ class ProductsApi extends SyndicatePlusApiBase
 	 */
 	public function getProductByEan($ean)  {
 		$result = $this->sendRequest("/products/product", "ean=$ean");
+		return $result;
+	}
+
+	/**
+	 * Returns a single brand result if a brand is found matching
+	 * the specified brand Id.
+	 *
+	 * @access public
+	 * @param $brandId 				The id of the brand to look up
+	 * @return object
+	 */
+	public function getBrandById($brandId) {
+		$result = $this->sendRequest("/brands/brand/". $brandId, "");
 		return $result;
 	}
 }

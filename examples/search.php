@@ -5,8 +5,8 @@
  * results as simple HTML.
  */
 
-define('APIKEY', 'mKmXPT4M7K40p1kSmxLgiziT_GRbpiAFdTsTRZyz0J4qAd5bkqBiyvTzp80IUJeEmTeoIzmXny8YEuS9kKWl40gfG7ikt9MJu1xMs2uOCkvh_N3ezAMTDcU4kJsgxwi1weEtK3wC1nBZPZ8Kv8Jnn4SV3iR_IKuv_AGaG7m7KLQ=');
-define('APISECRET', 'tKkh7YCrT7MSxOC1QH_K62XXsqlwpZqBkhHUYRWSqLMFeKHM3bcrEAhFLMAsntqCQjWBJRakoQegZBsmBgq2gjvqq2gI0UbmaAH4VNeKXsxv9z2mrHiFMtrqV-bkchO1KwSLS38E8C5z1yoh-aumHDTkjVhDpYhxzdc0KO6Y9xw=');
+define('APIKEY', 'my api key here');
+define('APISECRET', 'my api secret here');
 
 require_once "../src/productsapi.class.php";
 
